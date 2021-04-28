@@ -14,3 +14,7 @@ Bootstrap a developer-friendly NextJS app configured with:
 Edit `lib/siteConfig.ts` to change brand, SEO, nav and footer menu items, etc.
 
 There are a few example placeholder pages: About, Works, Privacy... feel free to change them as you see fit.
+
+## More examples and boilerplates
+
+Check [Vercel repository](https://github.com/vercel/next.js/tree/canary/examples) for an insane amount of examples and starters.
