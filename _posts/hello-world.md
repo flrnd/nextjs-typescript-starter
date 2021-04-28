@@ -3,9 +3,9 @@ title: Hello World
 date: '2021-04-28T15:51:00'
 description: 'The first post on my personal blog'
 keywords: Blog,Nextjs,developer,Hello world
-coverImage: 'https://via.placeholder.com/1920x1080'
+coverImage: '/assets/images/1920x1080.png'
 ogImage:
-  url: 'https://via.placeholder.com/1920x1080'
+  url: '/assets/images/1920x1080.png'
 ---
 
 There is no blog without Hello World post.
