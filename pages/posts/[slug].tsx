@@ -8,16 +8,22 @@ import { IPost } from '../../lib/interfaces'
 import PostTitle from '../../components/post/post-title'
 import PostHeader from '../../components/post/post-header'
 import PostBody from '../../components/post/post-body'
+import Pagination from '../../components/post/pagination'
 
 interface Props {
   post: IPost
+  allPosts: IPost[]
 }
 
-const Post = ({ post }: Props): JSX.Element => {
+const Post = ({ post, allPosts }: Props): JSX.Element => {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
+  const findBySlug = (slug: string) => allPosts.find((p) => p.slug === slug)
+  const current = allPosts.indexOf(findBySlug(post.slug))
+
   return (
     <Layout>
       <Container>
@@ -36,6 +42,7 @@ const Post = ({ post }: Props): JSX.Element => {
                 date={post.date}
               />
               <PostBody content={post.content} />
+              <Pagination current={current} posts={allPosts} />
             </article>
           </>
         )}
@@ -53,6 +60,7 @@ type Params = {
 }
 
 export async function getStaticProps({ params }: Params): Promise<any> {
+  const allPosts = getAllPosts(['step', 'title', 'slug'])
   const post = getPostBySlug(params.slug, [
     'title',
     'date',
@@ -70,6 +78,7 @@ export async function getStaticProps({ params }: Params): Promise<any> {
         ...post,
         content,
       },
+      allPosts,
     },
   }
 }
