@@ -3,7 +3,7 @@ export interface Menu {
   link: string
 }
 
-export interface Items {
+export interface Item {
   [key: string]: string
 }
 

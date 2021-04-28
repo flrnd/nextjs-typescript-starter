@@ -3,7 +3,7 @@ import { join } from 'path'
 import matter from 'gray-matter'
 import remark from 'remark'
 import html from 'remark-html'
-import { Items } from './interfaces'
+import { Item } from './interfaces'
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -11,13 +11,13 @@ export function getPostSlugs(): string[] {
   return fs.readdirSync(postsDirectory)
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []): Items {
+export function getPostBySlug(slug: string, fields: string[] = []): Item {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
-  const items: Items = {}
+  const items: Item = {}
 
   fields.forEach((field) => {
     if (field === 'slug') {
@@ -35,7 +35,7 @@ export function getPostBySlug(slug: string, fields: string[] = []): Items {
   return items
 }
 
-export function getAllPosts(fields: string[] = []): Items[] {
+export function getAllPosts(fields: string[] = []): Item[] {
   const slugs = getPostSlugs()
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
