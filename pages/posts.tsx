@@ -17,7 +17,7 @@ const Posts = ({ allPosts }: Props): JSX.Element => {
     <>
       <Layout>
         <Head>
-          <title>{}</title>
+          <title>Personal blog</title>
         </Head>
         <Container>
           {heroPost && (
