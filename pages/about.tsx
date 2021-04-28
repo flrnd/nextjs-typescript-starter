@@ -3,7 +3,9 @@ import Container from '../components/layout/container'
 
 const About = (): JSX.Element => (
   <Layout>
-    <Container>Hello about</Container>
+    <Container>
+      <h1>About page</h1>
+    </Container>
   </Layout>
 )
 

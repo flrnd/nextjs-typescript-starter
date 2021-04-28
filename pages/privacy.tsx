@@ -3,7 +3,9 @@ import Container from '../components/layout/container'
 
 const Privacy = (): JSX.Element => (
   <Layout>
-    <Container>Hello works</Container>
+    <Container>
+      <h1>Privacy page</h1>
+    </Container>
   </Layout>
 )
 
