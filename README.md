@@ -11,7 +11,7 @@ Bootstrap a developer-friendly NextJS app configured with:
 
 ## About this boilerplate
 
-I stitched together the blog and typescript starters from vercel examples. Added few things like a responsive grid layout -see `styles/global.css`- with a header nav (programatically generated and also editable), pagination, few placeholder pages, among other things.
+I stitched together the blog and typescript starters from Vercel examples. Added few things like a responsive grid layout -see `styles/global.css`- with a header nav (programmatically generated and also editable), pagination, few placeholder pages, among other things.
 
 ## Customize
 
