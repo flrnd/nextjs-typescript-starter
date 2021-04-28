@@ -12,3 +12,5 @@ Bootstrap a developer-friendly NextJS app configured with:
 ## Customize
 
 Edit `lib/siteConfig.ts` to change brand, SEO, nav and footer menu items, etc.
+
+There are a few example placeholder pages: About, Works, Privacy... feel free to change them as you see fit.
