@@ -3,8 +3,8 @@ import siteConfig from '../lib/siteConfig'
 import Layout from '../components/layout/layout'
 import Container from '../components/layout/container'
 
-const mainHeading = 'Something cool'
-const mainSubHeading = "Because it's cool"
+const mainHeading = 'My super heading'
+const mainSubHeading = 'the awesome sub-heading'
 
 const { SEO } = siteConfig
 
