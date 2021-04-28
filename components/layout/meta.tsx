@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import siteConfig from '../../lib/siteConfig'
 
-const { SEO } = siteConfig
+const { seo } = siteConfig
 
 const Meta = (): JSX.Element => {
   return (
@@ -25,22 +25,22 @@ const Meta = (): JSX.Element => {
       />
       <link rel="manifest" href="/favicon/site.webmanifest" />
       <link rel="shortcut icon" href="/favicon/favicon.ico" />
-      <link rel="canonical" href={SEO.canonicalURL} />
+      <link rel="canonical" href={seo.canonicalURL} />
 
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="msapplication-TileColor" content="#1a1a1a" />
       <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
       <meta name="theme-color" content="#1a1a1a" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-      <meta name="description" content={SEO.metaDescription} />
+      <meta name="description" content={seo.description} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         property="og:image"
         content="assets/illustrations/social-hero-0bc1b63126827f0e5960d78e61555707.png"
       />
-      <meta property="og:title" content={SEO.brand} />
-      <meta property="og:description" content={SEO.metaDescription} />
-      <meta property="og:url" content={SEO.canonicalURL} />
+      <meta property="og:title" content={seo.brand} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:url" content={seo.canonicalURL} />
     </Head>
   )
 }
