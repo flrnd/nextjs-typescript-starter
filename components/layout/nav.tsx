@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu } from '../../lib/interfaces'
+import siteConfig from '../../lib/siteConfig'
 import NavMenu from './nav-menu'
 
 interface Props {
@@ -9,13 +10,13 @@ interface Props {
 
 const Nav = ({ menu }: Props): JSX.Element => {
   const [isOpen, setIsOpen] = useState(false)
-
+  const { seo } = siteConfig
   return (
     <nav className="w-full z-1 bg-white">
       <div className="w-full mx-auto flex flex-wrap items-center justify-between mt-0 py-2 px-3">
         <div className="flex items-center">
           <Link href="/">
-            <a className="text-4xl font-bold">logo</a>
+            <a className="text-4xl font-bold">{seo.brand}</a>
           </Link>
         </div>
 
