@@ -9,6 +9,10 @@ Bootstrap a developer-friendly NextJS app configured with:
 - Testing with [Jest](https://jestjs.io/) and [`react-testing-library`](https://testing-library.com/docs/react-testing-library/intro)
 - [Tailwindcss](https://tailwindcss.com/)
 
+## About this boilerplate
+
+I stitched together the blog and typescript starters from vercel examples. Added few things like a responsive grid layout -see `styles/global.css`- with a header nav (programatically generated and also editable), pagination, few placeholder pages, among other things.
+
 ## Customize
 
 Edit `lib/siteConfig.ts` to change brand, SEO, nav and footer menu items, etc.
