@@ -4,7 +4,7 @@ import { getYear } from './util'
 const company = {
   name: 'company name',
   description: 'The best company & Co',
-  brand: 'brand name',
+  brand: 'brand & co',
   canonicalURL: 'http://www.example.com',
   address: '908 New Hampshire Avenue #100, Washington, DC 20037, United States',
   phone: '+1 123-123-2345',
