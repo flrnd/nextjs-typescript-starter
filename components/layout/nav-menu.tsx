@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Menu } from '../../lib/interfaces'
 
-type Props = {
+interface Props {
   menu: Menu[]
 }
 
