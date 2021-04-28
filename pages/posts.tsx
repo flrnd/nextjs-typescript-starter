@@ -5,6 +5,7 @@ import HeroPost from '../components/post/hero-post'
 import MoreStories from '../components/post/more-stories'
 import { getAllPosts } from '../lib/api'
 import { Item, IPost } from '../lib/interfaces'
+import siteConfig from '../lib/siteConfig'
 
 interface Props {
   allPosts: IPost[]
@@ -13,11 +14,16 @@ interface Props {
 const Posts = ({ allPosts }: Props): JSX.Element => {
   const heroPost = allPosts[0]
   const morePosts = allPosts.slice(1)
+  const { seo } = siteConfig
+
   return (
     <>
       <Layout>
         <Head>
-          <title>Personal blog</title>
+          <title>
+            {seo.brand} | {seo.pages.blog.title}
+          </title>
+          <meta name="description" content={seo.pages.blog.description} />
         </Head>
         <Container>
           {heroPost && (

@@ -6,13 +6,13 @@ import Container from '../components/layout/container'
 const mainHeading = 'My super heading'
 const mainSubHeading = 'the awesome sub-heading'
 
-const { SEO } = siteConfig
+const { seo } = siteConfig
 
 export const Home = (): JSX.Element => (
   <Layout>
     <Head>
       <title>
-        {SEO.pages.hero.title} | {SEO.brand}
+        {seo.brand} | {seo.pages.hero.title}
       </title>
     </Head>
     <Container>
