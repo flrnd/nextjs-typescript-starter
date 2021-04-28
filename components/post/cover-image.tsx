@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 type Props = {
   title: string
@@ -8,14 +9,16 @@ type Props = {
 
 const CoverImage = ({ title, src, slug }: Props): JSX.Element => {
   const image = (
-    <img
+    <Image
       src={src}
       alt={`Cover Image for ${title}`}
-      className={'shadow hover:shadow-md transition-shadow duration-200'}
+      layout="responsive"
+      width={1920}
+      height={1080}
     />
   )
   return (
-    <div className="sm:mx-0">
+    <div className="z-1 sm:mx-0">
       {slug ? (
         <Link as={`/posts/${slug}`} href="/posts/[slug]">
           <a aria-label={title}>{image}</a>
