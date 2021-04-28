@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout'
 import HeroPost from '../components/post/hero-post'
 import MoreStories from '../components/post/more-stories'
 import { getAllPosts } from '../lib/api'
-import { Items, IPost } from '../lib/interfaces'
+import { Item, IPost } from '../lib/interfaces'
 
 interface Props {
   allPosts: IPost[]
@@ -39,7 +39,7 @@ const Posts = ({ allPosts }: Props): JSX.Element => {
 export default Posts
 
 interface PostsProps {
-  props: { allPosts: Items[] }
+  props: { allPosts: Item[] }
 }
 
 export const getStaticProps = async (): Promise<PostsProps> => {
