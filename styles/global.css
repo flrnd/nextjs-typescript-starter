@@ -5,14 +5,12 @@
 @layer components {
   .page {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.2fr 2.6fr 0.2fr;
-    min-height: 100vh;
     grid-template-areas:
       'header'
       'main'
       'footer';
-    margin: 0;
+    grid-template-rows: 4rem 1fr auto;
+    height: 100vh;
   }
 
   .page-header {
@@ -27,5 +25,6 @@
   .page-footer {
     grid-area: footer;
     text-align: center;
+    @apply mt-auto;
   }
 }
