@@ -1,10 +1,9 @@
-import Head from 'next/head'
-import siteConfig from '../lib/siteConfig'
-import Layout from '../components/layout/layout'
-import Container from '../components/layout/container'
-import LastLaunch from '../components/last-launch'
+import Head from "next/head";
+import siteConfig from "../lib/siteConfig";
+import Layout from "../components/layout/layout";
+import Container from "../components/layout/container";
 
-const { seo } = siteConfig
+const { seo } = siteConfig;
 
 export const Home = (): JSX.Element => (
   <Layout>
@@ -14,9 +13,9 @@ export const Home = (): JSX.Element => (
       </title>
     </Head>
     <Container>
-      <LastLaunch />
+      <h1>hello world</h1>
     </Container>
   </Layout>
-)
+);
 
-export default Home
+export default Home;
