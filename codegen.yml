@@ -2,7 +2,7 @@ overwrite: true
 schema: https://api.spacex.land/graphql/
 documents: schema/**/*.graphql
 generates:
-  ./schema/graphql-operations.ts:
+  ./schema/generated/graphql.tsx:
     plugins:
       - typescript
       - typescript-operations
