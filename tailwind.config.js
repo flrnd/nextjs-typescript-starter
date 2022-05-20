@@ -4,11 +4,6 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true,
   },
-  theme: {
-    extend: {
-      backgroundImage: (theme) => ({}),
-    },
-  },
   variants: {},
   plugins: [],
 }
