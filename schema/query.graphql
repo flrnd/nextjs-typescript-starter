@@ -1,8 +1,11 @@
-query TestQuery {
-  launch(id: 56) {
-    id
-    mission {
-      name
+query LaunchLatest {
+  launchLatest {
+    mission_name
+    rocket {
+      rocket_name
+    }
+    ships {
+      image
     }
   }
 }
